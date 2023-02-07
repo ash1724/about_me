@@ -1,0 +1,169 @@
+@import url("./fonts.css");
+@import url("./reset.css");
+#wrap {
+  width: 100%;
+}
+#wrap #main {
+  width: 100%;
+  height: auto;
+  background-color: rgb(13, 17, 22);
+}
+#wrap #main #section1 {
+  width: 100%;
+}
+#wrap #main #section1 .container {
+  width: 100%;
+  max-width: 1194px;
+  margin: 0 auto;
+}
+#wrap #main #section1 .container .ment {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8) rotate(-90deg);
+  transition: all 1s;
+}
+#wrap #main #section1 .container .ment .gap {
+  width: 100%;
+}
+#wrap #main #section1 .container .ment .gap h2 {
+  text-align: center;
+  font-size: clamp(2rem, 5.8626vw, 7rem);
+  color: #fff;
+  line-height: 1.5;
+}
+#wrap #main #section1 .container .ment1 {
+  position: relative;
+  width: 100%;
+}
+#wrap #main #section1 .container .ment1 .gap {
+  width: 100%;
+}
+#wrap #main #section1 .container .ment1 .gap h2 {
+  -webkit-animation: sec1Ani2 2s;
+          animation: sec1Ani2 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+#wrap #main #section1 .container .ment1 .gap .mouse-wrap {
+  position: absolute;
+  background-color: lightcoral;
+  bottom: 80px;
+  left: calc(50% - 14px);
+  height: auto;
+}
+#wrap #main #section1 .container .ment1 .gap .mouse-wrap .mouse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background: url(../img/computer-mouse.png) no-repeat 50% 50%/cover;
+  -webkit-animation: sec1Ani1 1s;
+          animation: sec1Ani1 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+#wrap #main #section1 .container .ment6 {
+  width: 100%;
+}
+#wrap #main #section1 .container .ment6 .gap {
+  width: 100%;
+}
+#wrap #main #section1 .container .ment6 .gap h4 {
+  text-align: center;
+  color: #fff;
+  font-size: clamp(2rem, 4.1876vw, 5rem);
+  line-height: 1.5;
+}
+#wrap #main #section2 {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+#wrap #main #section2 h2 {
+  font-size: clamp(2rem, 5.8626vw, 6rem);
+  line-height: 1.5;
+}
+#wrap #main #section2 p {
+  font-size: clamp(2rem, 1.675vw, 2rem);
+}
+#wrap #main #section2 .card-background {
+  width: 100%;
+  max-width: 1194px;
+  margin: 0 auto;
+  height: 4000px;
+}
+#wrap #main #section2 .card-background .card-box {
+  top: 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  max-width: 80%;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+#wrap #main #section2 .card-background .card-box img {
+  display: block;
+  width: 100%;
+}
+#wrap #main #section3 {
+  width: 100%;
+}
+#wrap #main #section3 .container {
+  width: 100%;
+  height: 3000px;
+}
+
+@-webkit-keyframes sec1Ani1 {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  50% {
+    opacity: 0.1;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 15px;
+  }
+}
+
+@keyframes sec1Ani1 {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  50% {
+    opacity: 0.1;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 15px;
+  }
+}
+@-webkit-keyframes sec1Ani2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes sec1Ani2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
