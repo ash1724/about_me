@@ -125,7 +125,7 @@
         }
 
 
-        let sang = "";
+        let sang = ""; // test
 
         if( sang == 'test'){
           $('.card-box').eq(0).css('opacity', 1);
