@@ -2,7 +2,8 @@
 html,body {width: 100%;height: 100%;font-size:62.5%;}
 html {overflow-y: scroll;/* scroll-behavior: smooth; */}
 body {font: normal 14px/1 'NanumSquareNeo','arial';color:#444;background: #fff;}
-/* h1,h2,h3,h4,h5,h6,strong,b {font-weight: normal;font-size: 14px;} */
+h1,h2,h3,h4,h5,h6,strong,b {font-weight: normal;}
+p{}
 i,em,address {font-style: normal;}
 ul {list-style: none;}
 a {color:#444;text-decoration: none;;}

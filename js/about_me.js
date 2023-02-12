@@ -3,6 +3,7 @@
     init: function(){
       this.section1();
       this.section2();
+      this.section3();
     },
     section1:function(){
       // $.ajax({
@@ -66,14 +67,8 @@
 
         4539 4897
         */
-        a = $('#section2').offset().top + 100;
-        b = $('#section2').offset().top + 495;
 
-        console.log((높이 - $('#section2').offset().top));
-
-        a2 = $('#section2').offset().top + 821;
-        b2 = $('#section2').offset().top + 1039;
-
+        // console.log((높이 - $('#section2').offset().top));
 
         function 계산식(a,b){
           x = 1/(a-b) // 기울기
@@ -153,6 +148,68 @@
           $('.card-box').eq(3).css('opacity', cardY4);
           $('.card-box').eq(3).css('transform', `scale(${cardY4})`);
         }
+      })
+    },
+    section3:function(){
+      const options = { threshold: 0.4 };
+      let observer = new IntersectionObserver((e)=>{
+        e.forEach((item)=>{
+          if(item.isIntersecting){ // 박스가 보일때
+            document.querySelectorAll('#main')[0].style.background = '#fff';
+            document.querySelectorAll('.text')[0].style.background = '#fff';
+            document.querySelectorAll('.text')[1].style.background = '#fff';
+            document.querySelectorAll('.text')[2].style.background = '#fff';
+            document.querySelectorAll('.text')[3].style.background = '#fff';
+            document.querySelectorAll('.text')[4].style.background = '#fff';
+          }
+          else {
+            document.querySelectorAll('#main')[0].style.background = 'rgb(13, 17, 22)';
+            document.querySelectorAll('.text')[0].style.background = 'rgb(13, 17, 22)';
+            document.querySelectorAll('.text')[1].style.background = 'rgb(13, 17, 22)';
+            document.querySelectorAll('.text')[2].style.background = 'rgb(13, 17, 22)';
+            document.querySelectorAll('.text')[3].style.background = 'rgb(13, 17, 22)';
+            document.querySelectorAll('.text')[4].style.background = 'rgb(13, 17, 22)';
+          }
+        });
+      }, options)
+
+      let sec = document.querySelectorAll('#section3 .imac');
+
+      observer.observe(sec[0]);
+
+      // console.log( observer.observe() );
+
+      // console.log( document.querySelectorAll('#section3') );
+
+
+      $(window).scroll(function(){
+        var 높이 = $(window).scrollTop();
+        // console.log( $('#section3').scrollTop() );
+
+        function 계산식(a,b){
+          x = 1/(a-b) // 기울기
+          y = 1-(a/(a-b)) // 절편
+          return x * 높이 + y;
+        }
+
+        let port1_opacity = 계산식( $('#section3 .con').offset().top + 233,  $('#section3 .con').offset().top + 422 );
+        let port2_opacity = 계산식( $('#section3 .con').offset().top + 844,  $('#section3 .con').offset().top + 1228 );
+        let port3_opacity = 계산식( $('#section3 .con').offset().top + 1483, $('#section3 .con').offset().top + 1872 );
+        let port4_opacity = 계산식( $('#section3 .con').offset().top + 2126, $('#section3 .con').offset().top + 2516 );
+
+        // let port2_opacity = 계산식( $('#section3').offset().top + 233, $('#section3').offset().top + 422 );
+        // console.log(port1_opacity);
+
+        $(".port1").css('opacity',`${port1_opacity}`);
+        $(".port2").css('opacity',`${port2_opacity}`);
+        $(".port3").css('opacity',`${port3_opacity}`);
+        $(".port4").css('opacity',`${port4_opacity}`);
+
+        $(".text1").css('opacity',`${port1_opacity}`);
+        $(".text2").css('opacity',`${port2_opacity}`);
+        $(".text3").css('opacity',`${port3_opacity}`);
+        $(".text4").css('opacity',`${port4_opacity}`);
+
       })
     }
   }
