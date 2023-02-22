@@ -4,6 +4,7 @@
       this.section1();
       this.section2();
       this.section3();
+      this.section5();
     },
     section1:function(){
       // $.ajax({
@@ -192,10 +193,16 @@
           return x * 높이 + y;
         }
 
-        let port1_opacity = 계산식( $('#section3 .con').offset().top + 233,  $('#section3 .con').offset().top + 422 );
-        let port2_opacity = 계산식( $('#section3 .con').offset().top + 844,  $('#section3 .con').offset().top + 1228 );
-        let port3_opacity = 계산식( $('#section3 .con').offset().top + 1483, $('#section3 .con').offset().top + 1872 );
-        let port4_opacity = 계산식( $('#section3 .con').offset().top + 2126, $('#section3 .con').offset().top + 2516 );
+
+        let port1_opacity = 계산식( $('#section3 .con').offset().top + 300,  $('#section3 .con').offset().top + 600 );
+        let port2_opacity = 계산식( $('#section3 .con').offset().top + 900,  $('#section3 .con').offset().top + 1200 );
+        let port3_opacity = 계산식( $('#section3 .con').offset().top + 1500, $('#section3 .con').offset().top + 1800 );
+        let port4_opacity = 계산식( $('#section3 .con').offset().top + 2100, $('#section3 .con').offset().top + 2400 );
+
+        // let port1_opacity = 계산식( $('#section3 .con').offset().top + 233,  $('#section3 .con').offset().top + 422 );
+        // let port2_opacity = 계산식( $('#section3 .con').offset().top + 844,  $('#section3 .con').offset().top + 1228 );
+        // let port3_opacity = 계산식( $('#section3 .con').offset().top + 1483, $('#section3 .con').offset().top + 1872 );
+        // let port4_opacity = 계산식( $('#section3 .con').offset().top + 2126, $('#section3 .con').offset().top + 2516 );
 
         // let port2_opacity = 계산식( $('#section3').offset().top + 233, $('#section3').offset().top + 422 );
         // console.log(port1_opacity);
@@ -211,7 +218,36 @@
         $(".text4").css('opacity',`${port4_opacity}`);
 
       })
+    },
+    section5:function(){
+      $(window).scroll(function(){
+        var 높이 = $(window).scrollTop();
+        // console.log(높이);
+
+        function 계산식(a,b){
+          x = 1/(a-b) // 기울기
+          y = 1-(a/(a-b)) // 절편
+          return x * 높이 + y;
+        }
+
+        // 1 -> 0.8
+
+        // $('.sec5-img').css('transforom','scale(0.5)')
+
+        let port1_scale = 계산식( $('.title-box_t').offset().top + 1700,  $('.title-box_t').offset().top + 3500 );
+
+        if( port1_scale < 0.6 ) {
+          port1_scale = 0.6;
+        }
+        else if ( port1_scale > 1) {
+          port1_scale = 1
+        }
+
+        $('.sec5-img').css('transform',`scale(${port1_scale})`);
+
+        });
     }
   }
   aboutMe.init();
+
 })(jQuery);

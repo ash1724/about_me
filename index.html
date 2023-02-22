@@ -9,6 +9,7 @@
   <meta name="publisher" content="sangho">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./fontawesome/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="./js/lib/jquery.min.js"></script>
 </head>
 <body>
@@ -51,31 +52,34 @@
           </div>
         </div>
       </section>
-      <section id="section2">
+      <section id="section2"> <!-- 목차 -->
         <h2>목차</h2>
         <p>해당 이미지를 클릭하시면 바로 이동이 가능해요!</p>
         <div class="card-background">
           <div class="card-box">
-            <a href="#"><img src="./img/포토01.png"></a>
+            <a href="#section3"><img src="./img/포토01.png"></a>
           </div>
           <div class="card-box">
-            <a href="#"><img src="./img/포토02.png"></a>
+            <a href="#section4"><img src="./img/포토02.png"></a>
           </div>
           <div class="card-box">
-            <a href="#"><img src="./img/포토03.png"></a>
+            <a href="#section5"><img src="./img/포토03.png"></a>
           </div>
           <div class="card-box">
-            <a href="#"><img src="./img/포토04.png"></a>
+            <a href="#section6"><img src="./img/포토04.png"></a>
           </div>
           <div class="card-box">
-            <a href="#"><img src="./img/포토05.png"></a>
+            <a href="#section7"><img src="./img/포토05.png"></a>
           </div>
         </div>
       </section>
       <section id="section3">
         <div class="container">
-          <h4>첫번째 포토폴리오</h4>
-          <span>Mcdonald</span>
+          <div class="title-box">
+            <h4>첫번째 포토폴리오</h4>
+            <span>Mcdonald</span>
+          </div>
+
           <div class="con">
             <div class="left">
               <div class="text-box">
@@ -110,16 +114,63 @@
               </div>
             </div>
           </div>
+          <div class="url-box">
+            <p>자세한 내용은 아래를 클릭해주세요!</p>
+            <a href="http://ash1724.dothome.co.kr/portfolio_mcdonalds/" target="_blank" class="first-url">Macdonald 보러가기!</a>
+          </div>
         </div>
       </section>
       <section id="section4">
         <div class="container">
-
+          <div class="title-box">
+            <h4>두번째 포토폴리오</h4>
+            <span>Mcdonald_리뉴얼</span>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+            </div>
+          </div>
+          <p>첫 번째 포토폴리오는 맥도날드 공식사이트 최대한 동일하게 제작하려고 노력했다면,<br>
+            이번 포토폴리오는 제가 맥도날드를 리뉴얼하면 어떤식으로 만들어야할까 에서 시작하였습니다.<br>
+            해당 포토폴리오는 주로 <span>Parallax Scrolling</span>을 활용해 기존 사이트보다 좀 더 동적이게 구현하였습니다.
+          </p>
+          <div class="url-box">
+            <p>자세한 내용은 아래를 클릭해주세요!</p>
+            <a href="http://ash1724.dothome.co.kr/mcdonalds_r/" target="_blank" class="first-url">Mcdonald_리뉴얼 보러가기!</a>
+          </div>
+        </div>
+      </section>
+      <section id="section5">
+        <div class="container">
+          <div class="title-box_t">
+            <h4>세번째 포토폴리오</h4>
+            <span>skhynix</span>
+          </div>
+          <div class="sec5-img"></div>
+        </div>
+        <div class="img-box">
+          <div></div>
         </div>
       </section>
     </main>
   </div>
 
 <script src="./js/about_me.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+  });
+</script>
+
 </body>
 </html>
